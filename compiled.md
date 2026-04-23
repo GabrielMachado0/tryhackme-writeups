@@ -53,10 +53,10 @@ DoYouEven<INPUT>CTF
 ```
 The input is then compared using strcmp:
 
-First comparison rejects "__dso_handle"
+First comparison rejects "__dso_handle".
 
 Final comparison checks if the input equals "_init"
-Solution
+Solution.
 
 The correct password accepted by the program is:
 ```bash
@@ -64,9 +64,9 @@ DoYouEven_init
 ```
 ### Key Concepts Learned
 Understanding how strcmp works in C
-Interpreting conditional logic in compiled programs
+Interpreting conditional logic in compiled programs.
 Using Ghidra for basic reverse engineering
-Recognizing misleading patterns in decompiled code
+Recognizing misleading patterns in decompiled code.
 
 ### What I Learned
 This challenge highlighted that:
