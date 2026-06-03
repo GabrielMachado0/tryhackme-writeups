@@ -84,4 +84,4 @@ tryhackme-writeups/
 
 ---
 
-*By GabrielMachado0 — transitioning into cybersecurity, one lab at a time.*
+*By [GabrielMachado0](https://github.com/GabrielMachado0) — transitioning into cybersecurity, one lab at a time.*
