@@ -229,4 +229,4 @@ sudo /usr/bin/perl /home/itguy/backup.pl
 
 ---
 
-*Writeup by [GabrielMachado0]*
+*Writeup by GabrielMachado0*
