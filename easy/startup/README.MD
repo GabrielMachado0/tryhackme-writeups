@@ -235,4 +235,4 @@ Waited for cron to execute (~1 minute).
 
 ---
 
-*Writeup by [GabrielMachado0]*
+*Writeup by GabrielMachado0*
