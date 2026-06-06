@@ -50,7 +50,7 @@ nmap -sC -sV -oN scan.txt <THM_IP_MACHINE>
 The Apache default page hinted at a hostname. Added `team.thm` to `/etc/hosts`:
 
 ```bash
-echo "10.<THM_IP_MACHINE> team.thm" | sudo tee -a /etc/hosts
+echo "<THM_IP_MACHINE> team.thm" | sudo tee -a /etc/hosts
 ```
 
 ### Web — Directory Enumeration
