@@ -81,6 +81,8 @@ tryhackme-writeups/
     │   └── README.md
     └── thegame/
         └── README.md
+    └── yearoftherabbit/
+        └── README.md
 ```
 
 ---
