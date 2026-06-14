@@ -24,6 +24,7 @@ Each writeup documents the full methodology — reconnaissance, enumeration, exp
 | [Page Source](./easy/pagesource/) | Web / Enumeration | HTML comments, hidden links, directory listing, backup file exposure |
 | [Compiled](./easy/compiled/) | Reverse Engineering | Ghidra, static analysis, strcmp logic, hardcoded passwords |
 | [The Game](./easy/thegame/) | Reverse Engineering | strings, grep, plain text secrets in binaries |
+| [Year of the Rabbit](./easy/yearoftherabbit/) | Linux / Web / Steganography | Burp Suite, image steganography, Brainfuck decoding, sudo UID overflow |
 
 ---
 
