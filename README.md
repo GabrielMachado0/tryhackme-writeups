@@ -79,8 +79,10 @@ tryhackme-writeups/
     │   └── README.md
     ├── compiled/
     │   └── README.md
-    └── thegame/
-        └── README.md
+    ├── thegame/
+    │   └── README.md
+    ├── team/
+    │   └── README.md
     └── yearoftherabbit/
         └── README.md
 ```
